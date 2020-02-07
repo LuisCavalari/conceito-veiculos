@@ -9,6 +9,7 @@ const  siteMetadata  = require('./config/metadata')
 module.exports = {
   siteMetadata: {
     title: 'Conceito veiculos',
+    siteUrl:'https://hungry-cray-57ac9e.netlify.com/'
   },
 
   plugins: [
