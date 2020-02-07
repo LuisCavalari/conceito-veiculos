@@ -1,3 +1,36 @@
 import React from "react"
+import Slider from "../components/Slider";
+import GridContent from '../components/gridContent'
+import Layout from '../components/Layout'
+import Realmet from 'react-helmet'
+import { graphql } from "gatsby";
+export const query = graphql`
+  {
+    allContentfulSlides {
+      edges {
+        node {
+          texto
+          imagem {
+            id
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
 
-export default () => <div>Hello world!</div>
+export default ({ data }) => <div>
+    <Realmet title={data.site.siteMetadata.title}/>
+    <Layout>
+        <Slider data={data} />
+        <GridContent />
+    </Layout>
+</div>
