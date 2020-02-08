@@ -48,7 +48,7 @@ export default function CarrosAVenda({ data }) {
     <Layout>
       <Helmet title={`${title} | Carros a venda`} />
       <Container>
-        <h2>Veiculos a venda</h2>
+        <h2 style={{width:'100%',margin:'0 10px' }}>Veiculos a venda</h2>
         {carsList.length < 1  ? <h2 style={{width:'100%', margin:'0 10px'}}> No momento não temos nenhum veiculo registrado nesta seção</h2> : ''}
         <div className="cars-grid">
         {carsList.map(car =>  
