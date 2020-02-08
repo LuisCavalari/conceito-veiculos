@@ -22,7 +22,7 @@ export const Container = styled.div`
   .each-slide img{
       border-radius:10px;
       width:100%;
-      height:667px;
+      height:auto;
  
   }
   section {

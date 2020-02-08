@@ -4,7 +4,7 @@ import { Container } from "./styles";
 
 export default function Footer() {
     return (
-        <Container>
+        <Container id="footer">
             <div className="footer-area">
                 <div className="footer-box">
                     <h2>Contato</h2>

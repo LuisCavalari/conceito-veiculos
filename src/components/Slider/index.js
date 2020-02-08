@@ -2,7 +2,6 @@ import React from 'react';
 import { Slide } from "react-slideshow-image";
 import { Container } from './styles';
 
-import slide1 from "../../../assets/img/slide1.jpg";
 
 
 
@@ -23,8 +22,8 @@ export default function Slider({ data }) {
 
       <Slide {...properties}>
         
-        {slides.map(slide =>
-          <div className="each-slide" style={
+        {slides.map((slide,index) =>
+          <div key={index} className="each-slide" style={
             {background:`linear-gradient( to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url(${slide.node.imagem.fluid.src })`,
             backgroundRepeat:'no-repeat',
             backgroundSize:'cover',

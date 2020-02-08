@@ -7,12 +7,24 @@ export const Container = styled.div`
   padding:10px;
   display:flex;
   justify-content:space-around;
+  @media screen and (max-width:768px) {
+    flex-direction:column;
+  }
   .card-area {
     flex:1;
     margin-right:25px;
+    overflow:hidden;
+    border-radius:10px;
+    
     img {
         width:100%;
+        border-radius:10px;
+        max-height:220px;
+
     }
+    @media screen and (max-width:768px) {
+          margin:0;
+  }
   }
   .card {
     position: relative;

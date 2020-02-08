@@ -6,7 +6,7 @@ import Layout from "../../components/Layout";
 
 export const query = graphql`
 {
-  allContentfulCarros(filter: {vendido: {eq: false}}) {
+  allContentfulCarros(filter: {vendido: {eq: true}}) {
     edges {
       node {
         id
@@ -40,18 +40,17 @@ export const query = graphql`
 }
 
 `
-export default function CarrosAVenda({ data }) {
+export default function CarrosVendidos({ data }) {
   const carsList = data.allContentfulCarros.edges
   const title = data.site.siteMetadata.title
-  console.log(data.allSite)
   return (
     <Layout>
-      <Helmet title={`${title} | Carros a venda`} />
+      <Helmet title={`${title} | Carros vendidos`} />
       <Container>
-        <h2>Veiculos a venda</h2>
+        <h2>Veiculos vendidos</h2>
         {carsList.length < 1  ? <h2 style={{width:'100%'}}> No momento não temos nenhum veiculo registrado nesta seção</h2> : ''}
         <div className="cars-grid">
-        {carsList.map(car =>  
+        {carsList && carsList.map(car =>  
           <Link to={`carros-a-venda/${car.node.slug}`} >
           <div className="card-car">
             <img src={car.node.carPictures[0].fluid.srcWebp} alt="" />
@@ -66,7 +65,7 @@ export default function CarrosAVenda({ data }) {
           </div>
           </Link>
           
-        )}
+          )}
         </div>
       </Container>
 

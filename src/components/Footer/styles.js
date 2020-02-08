@@ -32,5 +32,8 @@ export const Container = styled.footer`
             }
         }
 
+        @media screen and (max-width:768px) {
+           flex-direction:column;
+        }
     }
 `;

@@ -42,10 +42,6 @@ module.exports = {
             family: `Saira`,
             variants: [`400`, `700`]
           },
-          {
-            family: `Material Icons`,
-            variants: [`400`]
-          },
         ],
       },
     },

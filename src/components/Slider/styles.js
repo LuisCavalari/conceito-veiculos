@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+    
     .each-slide{
         width:100%;
         max-height:100%;
