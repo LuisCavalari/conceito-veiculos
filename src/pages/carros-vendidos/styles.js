@@ -19,6 +19,7 @@ export const Container = styled.div`
         justify-content:center;
         align-items:center;
         flex-direction:column;
+        margin:15px auto;
       }
   }
   .card-car {

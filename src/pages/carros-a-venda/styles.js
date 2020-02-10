@@ -25,16 +25,15 @@ export const Container = styled.div`
       overflow:hidden;
       border-radius:5px;
       width:100%;
-      column-span:all;
       position: relative;
-      
+
       cursor:pointer;
       img {
           width:100%;
       }
       @media screen and (max-width:768px) {
         width:90%;
-        margin:auto;
+        margin:15px auto;
       }
     .card-info {
       transition:all 300ms linear;
