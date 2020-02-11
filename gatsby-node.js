@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const cars = result.data.allContentfulCarros.edges
+        const cars = result.data.allContentfulVeiculos.edges
         cars.forEach((car, index) => {
           createPage({
             path: `/carros-a-venda/${car.node.slug}/`,

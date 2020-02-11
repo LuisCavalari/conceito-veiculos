@@ -22,7 +22,7 @@ export const query = graphql`
  }
 `
 export default function Car({ data }) {
-    const carro = data.contentfulCarros
+    const carro = data.contentfulVeiculos
     const { carPictures } = carro
     return (
         <Layout>

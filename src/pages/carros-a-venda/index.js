@@ -41,7 +41,7 @@ export const query = graphql`
 
 `
 export default function CarrosAVenda({ data }) {
-  const carsList = data.allContentfulCarros.edges
+  const carsList = data.allContentfulVeiculos.edges
   const title = data.site.siteMetadata.title
   console.log(data.allSite)
   return (
