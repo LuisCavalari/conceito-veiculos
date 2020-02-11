@@ -6,7 +6,7 @@ import { Container } from './styles';
 
 export const query = graphql`
  query loadCarData($slug: String!) {
-    contentfulCarros(slug: {eq: $slug}) {
+    contentfulVeiculos (slug: {eq: $slug}) {
         price
         carPictures {
           fluid(toFormat: WEBP, maxWidth: 1000) {

@@ -6,7 +6,7 @@ import Layout from "../../components/Layout";
 
 export const query = graphql`
 {
-  allContentfulCarros(filter: {vendido: {eq: true}}) {
+  allContentfulVeiculos(filter: {vendido: {eq: true}}) {
     edges {
       node {
         id

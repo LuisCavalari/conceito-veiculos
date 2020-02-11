@@ -10,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
         query loadPagesQuery{
-            allContentfulCarros {
+            allContentfulVeiculos {
                 edges {
                   node {
                     slug
