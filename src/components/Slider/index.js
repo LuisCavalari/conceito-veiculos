@@ -31,10 +31,7 @@ export default function Slider({ data }) {
            
               
             }}>
-            {slide.node.texto && <span>
-              {slide.node.texto}
-            </span>
-            }
+            <span>{slide.node.texto}</span>
           </div>  
         )}
         
