@@ -19,7 +19,6 @@ export const Container = styled.div`
         justify-content:center;
         align-items:center;
         flex-direction:column;
-        margin:15px auto;
       }
   }
   .card-car {
@@ -36,6 +35,7 @@ export const Container = styled.div`
       @media screen and (max-width:768px) {
         width:90%;
         margin:auto;
+        margin:15px auto;
       }
     .card-info {
       transition:all 300ms linear;
