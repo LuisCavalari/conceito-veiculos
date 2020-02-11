@@ -9,7 +9,7 @@ export const query = graphql`
     allContentfulSlides {
       edges {
         node {
-          texto
+          
           imagem {
             id
             fluid {
