@@ -80,7 +80,7 @@ export default function Header() {
                                 Veículos
                         <ul className="dropdown">
                                     <li>
-                                        <Link to="/carros-a-venda">Veículos `a venda</Link>
+                                        <Link to="/carros-a-venda">Veículos a venda</Link>
                                     </li>
                                     <Link to="/carros-vendidos"> <li>Veículos vendidos</li></Link>
                                 </ul>
