@@ -6,6 +6,7 @@ import Realmet from 'react-helmet'
 import { graphql } from "gatsby";
 export const query = graphql`
   {
+    
     allContentfulSlides {
       edges {
         node {
@@ -19,18 +20,48 @@ export const query = graphql`
         }
       }
     }
+
     site {
       siteMetadata {
         title
       }
     }
+    vendidos : allContentfulVeiculos(sort: {fields: createdAt, order: DESC}, filter: {vendido: {eq: true}}, limit: 1) {
+      edges {
+        node {
+          id
+          carPictures {
+            fluid {
+              srcSet
+            }
+          }
+        }
+      }
+  }
+  aVenda : allContentfulVeiculos(sort: {fields: createdAt, order: DESC}, filter: {vendido: {eq: false}}, limit: 1) {
+      edges {
+        node {
+          id
+          carPictures {
+            fluid {
+              srcSet
+            }
+          }
+        }
+      }
+    }      
+
+    
+
   }
 `
 
-export default ({ data }) => <div>
+export default ({ data }) =>
+
+<div>
     <Realmet title={data.site.siteMetadata.title}/>
     <Layout>
         <Slider data={data} />
-        <GridContent />
+        <GridContent data={data} />
     </Layout>
 </div>

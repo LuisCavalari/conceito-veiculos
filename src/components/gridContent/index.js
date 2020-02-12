@@ -5,19 +5,25 @@ import { Link } from "gatsby";
 import { Container } from './styles';
 
 
-export default function GridContent() {
+
+export default function GridContent({data}) {
+    console.log(data)
+    
+    const imgVendidos = data.vendidos.edges ? data.vendidos.edges[0].node.carPictures[0].fluid  : null 
+    const imgAVenda = data.aVenda.edges.length > 0 ? data.aVenda.edges[0].node.carPictures[0].fluid  : null 
+
     return (
         <Container >
             <Link to="/carros-a-venda">
 
                 <div className="card-area">
-                    <h2>Carros a venda</h2>
+                    <h2>Veículos a venda</h2>
 
                     <div className="card">
-                        <img className="card-image" src={imagemVenda} alt="Carro" />
+                        <img className="card-image" srcSet={(imgAVenda && imgAVenda.srcSet) || imagemVenda  } alt="Carro" />
                         <div className="card-info">
                             <div className="card-name">
-                                Ver carros a venda
+                                Ver veículos a venda
                             </div>
                         </div>
                     </div>
@@ -25,12 +31,12 @@ export default function GridContent() {
             </Link>
             <Link to="/carros-vendidos">
                 <div className="card-area">
-                    <h2>Carros vendidos</h2>
+                    <h2>Veículos vendidos</h2>
                     <div className="card">
-                        <img className="card-image" src={imagemVendidos} alt="Carro" />
+                        <img className="card-image" srcSet={imgVendidos.srcSet || imagemVendidos }  alt="Carro" />
                         <div className="card-info">
                             <div className="card-name">
-                                Ver carros vendidos
+                                Ver veículos vendidos
                         </div>
                         </div>
                     </div>

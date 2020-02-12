@@ -5,21 +5,23 @@ export const Container = styled.div`
   margin:0 auto;
   width:100%;
   padding:10px;
-  display:flex;
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:15px;
+
   justify-content:space-around;
   @media screen and (max-width:768px) {
-    flex-direction:column;
+    grid-template-columns: 1fr;
   }
   .card-area {
-    flex:1;
-    margin-right:25px;
     overflow:hidden;
     border-radius:10px;
-    
+    width:100%;
     img {
         width:100%;
+        max-width:100%;
         border-radius:10px;
-        max-height:220px;
+        height:220px;
 
     }
     @media screen and (max-width:768px) {

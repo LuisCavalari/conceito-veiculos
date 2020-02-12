@@ -16,7 +16,6 @@ export default function Slider({ data }) {
  
   const slides = data.allContentfulSlides.edges 
   
-
   return (
     <Container>
 
