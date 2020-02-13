@@ -29,7 +29,7 @@ export const Container = styled.div`
       width:100%;
       column-span:all;
       position: relative;
-      
+      flex:1;
       cursor:pointer;
       img {
           width:100%;
@@ -37,6 +37,7 @@ export const Container = styled.div`
       }
       @media screen and (max-width:768px) {
         width:90%;
+        min-width:100%;
         margin:auto;
         margin:15px auto;
       }
