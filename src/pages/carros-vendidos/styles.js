@@ -32,8 +32,8 @@ export const Container = styled.div`
       flex:1;
       cursor:pointer;
       img {
-          width:100%;
-          min-width:100%;
+          width:100vw;
+          height:100%;
       }
       @media screen and (max-width:768px) {
         width:100vw;
