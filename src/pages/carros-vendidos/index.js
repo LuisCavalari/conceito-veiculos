@@ -18,7 +18,7 @@ export const query = graphql`
         carPictures {
           description
           fluid{
-            srcWebp
+            src
           }
         }
       }
@@ -53,7 +53,7 @@ export default function CarrosVendidos({ data }) {
         {carsList && carsList.map(car =>  
           <Link to={`carros-a-venda/${car.node.slug}`} >
           <div className="card-car">
-            <img src={car.node.carPictures[0].fluid.srcWebp} alt="" />
+            <img src={car.node.carPictures[0].fluid.src} alt="" />
             <div className="card-info">
               <div className="card-name">
                 <span>{car.node.carName}</span>
