@@ -32,13 +32,16 @@ export const Container = styled.div`
       flex:1;
       cursor:pointer;
       img {
-          width:100vw;
+          width:100%;
           height:100%;
       }
       @media screen and (max-width:768px) {
         width:100vw;
         margin:auto;
         margin:15px auto;
+        img {
+          width:100vw;
+        }
       }
     .card-info {
       transition:all 300ms linear;
