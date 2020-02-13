@@ -17,6 +17,7 @@ export const Container = styled.div`
       margin-bottom:15px;
       @media screen and (max-width:768px) {
         display:flex;
+        width:100%;
         justify-content:center;
         align-items:center;
         flex-direction:column;
