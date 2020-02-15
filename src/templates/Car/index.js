@@ -9,7 +9,7 @@ export const query = graphql`
     contentfulVeiculos (slug: {eq: $slug}) {
         price
         carPictures {
-          fluid(toFormat: WEBP, maxWidth: 1000) {
+          fluid( maxWidth: 1000) {
             src
           }
         }
